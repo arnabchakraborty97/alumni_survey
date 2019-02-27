@@ -14,3 +14,5 @@
 Route::get('/', 'HomeController@index')->name('dashboard');
 
 Auth::routes();
+
+Route::resource('questions', 'QuestionController');
