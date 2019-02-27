@@ -23,3 +23,6 @@ Route::resource('answers', 'AnswerController');
 
 // Surveys
 Route::resource('surveys', 'SurveyController');
+
+// Departments
+Route::resource('departments', 'DepartmentController');

@@ -17,6 +17,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('surveys.index') }}">Surveys</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('departments.index') }}">Departments</a>
+                        </li>
 
                     </ul>
 

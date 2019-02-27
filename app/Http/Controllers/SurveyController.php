@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Survey;
 use App\Answer;
 use App\Question;
+use App\Department;
 use Illuminate\Http\Request;
 
 class SurveyController extends Controller
@@ -29,8 +30,14 @@ class SurveyController extends Controller
     public function create()
     {
         $questions = Question::all();
+        $departments = Department::all();
 
-        return view('surveys.CreateOrEdit')->with('questions', $questions);
+        $context = [
+            'questions' => $questions,
+            'departments' => $departments
+        ];
+
+        return view('surveys.CreateOrEdit')->with($context);
     }
 
     /**
@@ -41,6 +48,8 @@ class SurveyController extends Controller
      */
     public function store(Request $request)
     {
+        dd($request);
+
         $survey = new Survey;
         $survey->save();
 
