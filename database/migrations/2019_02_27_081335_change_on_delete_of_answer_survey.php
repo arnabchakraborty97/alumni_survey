@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateQuestionsTable extends Migration
+class ChangeOnDeleteOfAnswerSurvey extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateQuestionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('questions', function (Blueprint $table) {
-            $table->increments('id');
-            $table->text('body');
-            $table->timestamps();
+        Schema::table('answers', function (Blueprint $table) {
+            $table->dropForeign('answers_survey_id_foreign');
+            $table->foreign('survey_id')->references('id')->on('surveys')->onDelete('cascade');
         });
     }
 
@@ -27,6 +26,8 @@ class CreateQuestionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('questions');
+        Schema::table('answers', function (Blueprint $table) {
+            //
+        });
     }
 }

@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Question extends Model
+class Survey extends Model
 {
     public $primaryKey = 'id';
     public $timestamps = true;
@@ -12,5 +12,4 @@ class Question extends Model
     public function answers() {
     	return $this->hasMany('App\Answer');
     }
-
 }
