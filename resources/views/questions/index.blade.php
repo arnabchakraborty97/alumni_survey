@@ -25,7 +25,7 @@
 						@foreach($questions as $question)
 
 							<tr>
-								<td>{{ $question->body }}</td>
+								<td><p>{{ $question->body }}</p></td>
 								<td>
 									<a href="{{ route('questions.edit', $question) }}" class="btn btn-primary btn-sm">Edit</a>
 								</td>
