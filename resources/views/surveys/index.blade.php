@@ -17,6 +17,7 @@
 					<thead class="thead-dark">
 						<tr>
 							<th>#</th>
+							<th>Type</th>
 							<th>Filled By</th>
 							<th>Delete</th>
 						</tr>
@@ -26,6 +27,7 @@
 
 							<tr>
 								<td>{{ $survey->id }}</td>
+								<td><a href="{{ route('surveys.show', $survey) }}">{{ $survey->name }}</a></td>
 								<td>@foreach($survey->answers as $answer) {{ $answer->body }} @break @endforeach</td>
 								<td>
 									{{ Form::open(['action' => ['SurveyController@destroy', $survey], 'method' => 'POST']) }}

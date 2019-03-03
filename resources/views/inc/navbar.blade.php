@@ -10,16 +10,17 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('questions.index') }}">Questions</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('surveys.index') }}">Surveys</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('departments.index') }}">Departments</a>
-                        </li>
+                        @auth
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('questions.index') }}">Questions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('surveys.index') }}">Surveys</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('departments.index') }}">Departments</a>
+                            </li>
+                        @endauth
 
                     </ul>
 

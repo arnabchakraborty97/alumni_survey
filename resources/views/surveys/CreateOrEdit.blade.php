@@ -114,10 +114,10 @@
 
 				{{ Form::hidden('question[]', $questions[11]->id) }}
 				{{ Form::label('12', $questions[11]->body, ['class' => 'col-form-label font-weight-bold']) }}<br>
-				<input type="radio" name="12[]" value="Less that 1 year">Less that 1 year<br>
-				<input type="radio" name="12[]" value="1 - 5 years">1 - 5 years<br>
-				<input type="radio" name="12[]" value="5 - 10 years">5 - 10 years<br>
-				<input type="radio" name="12[]" value="10 - 15 years">10 - 15 years<br>
+				<input type="radio" name="12" value="Less that 1 year">Less that 1 year<br>
+				<input type="radio" name="12" value="1 - 5 years">1 - 5 years<br>
+				<input type="radio" name="12" value="5 - 10 years">5 - 10 years<br>
+				<input type="radio" name="12" value="10 - 15 years">10 - 15 years<br>
 
 				{{ Form::hidden('question[]', $questions[12]->id) }}
 				{{ Form::label('13', $questions[12]->body, ['class' => 'col-form-label font-weight-bold']) }}<br>
@@ -127,10 +127,10 @@
 
 				{{ Form::hidden('question[]', $questions[13]->id) }}
 				{{ Form::label('14', $questions[13]->body, ['class' => 'col-form-label font-weight-bold']) }}<br>
-				<input type="radio" name="14[]" value=">= 10r">>= 10<br>
-				<input type="radio" name="14[]" value="7 - 9">7 - 9<br>
-				<input type="radio" name="14[]" value="4 - 6">4 - 6<br>
-				<input type="radio" name="14[]" value="1 - 3">1 - 3<br>
+				<input type="radio" name="14" value=">= 10r">>= 10<br>
+				<input type="radio" name="14" value="7 - 9">7 - 9<br>
+				<input type="radio" name="14" value="4 - 6">4 - 6<br>
+				<input type="radio" name="14" value="1 - 3">1 - 3<br>
 
 				{{ Form::hidden('question[]', $questions[14]->id) }}
 				{{ Form::label('15', $questions[14]->body, ['class' => 'col-form-label font-weight-bold']) }}<br>
@@ -383,7 +383,7 @@
 						</tr>
 						<tr>
 							<td>2</td>
-							<td><input type="text" name="19[]" value="Sharing experience in ensuring legal compliance" class="form-control" readonly></td>
+							<td><input type="text" name="20[]" value="Sharing experience in ensuring legal compliance" class="form-control" readonly></td>
 							<td><input type="radio" name="20_2" value="Agree"></td>
 							<td><input type="radio" name="20_2" value="No opinion"></td>
 							<td><input type="radio" name="20_2" value="Disagree"></td>
@@ -461,6 +461,184 @@
 						</tr>
 					</tbody>
 				</table>
+
+				{{ Form::hidden('question[]', $questions[21]->id) }}
+				{{ Form::label('22', $questions[21]->body, ['class' => 'col-form-label font-weight-bold']) }}<br>
+				<table class="table table-sm table-bordered">
+					<thead class="thead-dark">
+						<tr>
+							<th></th>
+							<th>Agree</th>
+							<th>No Opinion</th>
+							<th>Disgaree</th>
+						</tr>
+					</thead>
+					<tbody class="tbody-light">
+						<tr>
+							<td><input type="text" name="22[]" value="Communicate Effectively" class="form-control" readonly></td>
+							<td><input type="radio" name="22_1" value="Agree"></td>
+							<td><input type="radio" name="22_1" value="No opinion"></td>
+							<td><input type="radio" name="22_1" value="Disagree"></td>
+						</tr>
+						<tr>
+							<td><input type="text" name="22[]" value="Function effectively as an individual and as a member / leader in-diverse teams" class="form-control" readonly></td>
+							<td><input type="radio" name="22_2" value="Agree"></td>
+							<td><input type="radio" name="22_2" value="No opinion"></td>
+							<td><input type="radio" name="22_2" value="Disagree"></td>
+						</tr>
+						<tr>
+							<td><input type="text" name="22[]" value="Commit to professional and ethical responsibilities" class="form-control" readonly></td>
+							<td><input type="radio" name="22_3" value="Agree"></td>
+							<td><input type="radio" name="22_3" value="No opinion"></td>
+							<td><input type="radio" name="22_3" value="Disagree"></td>
+						</tr>
+						<tr>
+							<td><input type="text" name="22[]" value="Apply knowledge on mathematics, science and engineering" class="form-control" readonly></td>
+							<td><input type="radio" name="22_4" value="Agree"></td>
+							<td><input type="radio" name="22_4" value="No opinion"></td>
+							<td><input type="radio" name="22_4" value="Disagree"></td>
+						</tr>
+						<tr>
+							<td><input type="text" name="22[]" value="Apply engineering techniques and skills" class="form-control" readonly></td>
+							<td><input type="radio" name="22_5" value="Agree"></td>
+							<td><input type="radio" name="22_5" value="No opinion"></td>
+							<td><input type="radio" name="22_5" value="Disagree"></td>
+						</tr>
+						<tr>
+							<td><input type="text" name="22[]" value="Identify, formulate, and solve problems" class="form-control" readonly></td>
+							<td><input type="radio" name="22_6" value="Agree"></td>
+							<td><input type="radio" name="22_6" value="No opinion"></td>
+							<td><input type="radio" name="22_6" value="Disagree"></td>
+						</tr>
+						<tr>
+							<td><input type="text" name="22[]" value="Conduct investigations and provide valid conclusions" class="form-control" readonly></td>
+							<td><input type="radio" name="22_7" value="Agree"></td>
+							<td><input type="radio" name="22_7" value="No opinion"></td>
+							<td><input type="radio" name="22_7" value="Disagree"></td>
+						</tr>
+						<tr>
+							<td><input type="text" name="22[]" value="Analyze and interpret data" class="form-control" readonly></td>
+							<td><input type="radio" name="22_8" value="Agree"></td>
+							<td><input type="radio" name="22_8" value="No opinion"></td>
+							<td><input type="radio" name="22_8" value="Disagree"></td>
+						</tr>
+						<tr>
+							<td><input type="text" name="22[]" value="Design/ Develop solutions meeting their requirements" class="form-control" readonly></td>
+							<td><input type="radio" name="22_9" value="Agree"></td>
+							<td><input type="radio" name="22_9" value="No opinion"></td>
+							<td><input type="radio" name="22_9" value="Disagree"></td>
+						</tr>
+						<tr>
+							<td><input type="text" name="22[]" value="Understand societal impact of engineering solutions and issues" class="form-control" readonly></td>
+							<td><input type="radio" name="22_10" value="Agree"></td>
+							<td><input type="radio" name="22_10" value="No opinion"></td>
+							<td><input type="radio" name="22_10" value="Disagree"></td>
+						</tr>
+						<tr>
+							<td><input type="text" name="22[]" value="Use modern engineering equipment, software, tools or technology for design and development" class="form-control" readonly></td>
+							<td><input type="radio" name="22_11" value="Agree"></td>
+							<td><input type="radio" name="22_11" value="No opinion"></td>
+							<td><input type="radio" name="22_11" value="Disagree"></td>
+						</tr>
+						<tr>
+							<td><input type="text" name="22[]" value="Recognise the need for life long learning and stay relevant in the profession" class="form-control" readonly></td>
+							<td><input type="radio" name="22_12" value="Agree"></td>
+							<td><input type="radio" name="22_12" value="No opinion"></td>
+							<td><input type="radio" name="22_12" value="Disagree"></td>
+						</tr>
+					</tbody>
+				</table>
+
+				{{ Form::hidden('question[]', $questions[22]->id) }}
+				{{ Form::label('23', $questions[22]->body, ['class' => 'col-form-label font-weight-bold']) }}<br>
+				<table class="table table-bordered table-sm">
+					<thead class="thead-dark">
+						<tr>
+							<th></th>
+							<th>Suggestion</th>
+						</tr>
+					</thead>
+					<tbody class="tbody-light">
+						<tr>
+							<td><input type="text" name="23[]" value="Lecture" class="form-control" readonly></td>
+							<td><input type="text" name="23_1" class="form-control"></td>
+						</tr>
+						<tr>
+							<td><input type="text" name="23[]" value="Practical" class="form-control" readonly></td>
+							<td><input type="text" name="23_2" class="form-control"></td>
+						</tr>
+						<tr>
+							<td><input type="text" name="23[]" value="Assignment" class="form-control" readonly></td>
+							<td><input type="text" name="23_3" class="form-control"></td>
+						</tr>
+						<tr>
+							<td><input type="text" name="23[]" value="Tutorial" class="form-control" readonly></td>
+							<td><input type="text" name="23_4" class="form-control"></td>
+						</tr>
+					</tbody>
+				</table>
+
+				{{ Form::hidden('question[]', $questions[23]->id) }}
+				{{ Form::label('24', $questions[23]->body, ['class' => 'col-form-label font-weight-bold']) }}<br>
+				<table class="table table-bordered table-sm">
+					<thead class="thead-dark">
+						<tr>
+							<th>Sl No.</th>
+							<th>Additional Courses</th>
+							<th>Strengthened(Additional Topics in Syllabi)</th>
+						</tr>
+					</thead>
+					<tbody class="tbody-light">
+						<tr>
+							<td>1</td>
+							<td>{{ Form::text('24_1[]', '', ['class' => 'form-control']) }}</td>
+							<td>{{ Form::text('24_1[]', '', ['class' => 'form-control']) }}</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>{{ Form::text('24_2[]', '', ['class' => 'form-control']) }}</td>
+							<td>{{ Form::text('24_2[]', '', ['class' => 'form-control']) }}</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>{{ Form::text('24_3[]', '', ['class' => 'form-control']) }}</td>
+							<td>{{ Form::text('24_3[]', '', ['class' => 'form-control']) }}</td>
+						</tr>
+					</tbody>
+				</table>
+
+				{{ Form::hidden('question[]', $questions[24]->id) }}
+				{{ Form::label('25', $questions[24]->body, ['class' => 'col-form-label font-weight-bold']) }}<br>
+				<table class="table table-bordered table-sm">
+					<thead class="thead-dark">
+						<tr>
+							<th>Sl No.</th>
+							<th>Additional Courses</th>
+							<th>Strengthened(Additional Experiments)</th>
+						</tr>
+					</thead>
+					<tbody class="tbody-light">
+						<tr>
+							<td>1</td>
+							<td>{{ Form::text('25_1[]', '', ['class' => 'form-control']) }}</td>
+							<td>{{ Form::text('25_1[]', '', ['class' => 'form-control']) }}</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>{{ Form::text('25_2[]', '', ['class' => 'form-control']) }}</td>
+							<td>{{ Form::text('25_2[]', '', ['class' => 'form-control']) }}</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>{{ Form::text('25_3[]', '', ['class' => 'form-control']) }}</td>
+							<td>{{ Form::text('25_3[]', '', ['class' => 'form-control']) }}</td>
+						</tr>
+					</tbody>
+				</table>
+
+				{{ Form::hidden('question[]', $questions[25]->id) }}
+				{{ Form::label('26', $questions[25]->body, ['class' => 'col-form-label font-weight-bold']) }}<br>
+				{{ Form::textarea('26', '', ['class' => 'form-control']) }}
 
 
 				@if(isset($survey))
