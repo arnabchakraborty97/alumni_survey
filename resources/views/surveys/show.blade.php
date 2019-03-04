@@ -28,13 +28,16 @@
 			<tr>
 				<td>{{ $questions[14]->body }}</td>
 				<td>
-					<strong>{!! explode(',', $answers[14]->body)[0] !!}</strong><br>
-					Graduation Year: {!! explode(',', $answers[14]->body)[1] !!}<br>
-					Specialization: {!! explode(',', $answers[14]->body)[2] !!}<br>
-					<strong>{!! explode(',', $answers[14]->body)[3] !!}</strong><br>
-					Graduation Year: {!! explode(',', $answers[14]->body)[4] !!}<br>
-					Specialization: {!! explode(',', $answers[14]->body)[5] !!}
-				</td>
+					@if(isset(explode(',', $answers[14]->body)[0]))<strong>{!! explode(',', $answers[14]->body)[0] !!}</strong><br>@endif
+					@if(isset(explode(',', $answers[14]->body)[1]))Graduation Year: {!! explode(',', $answers[14]->body)[1] !!}<br>@endif
+					@if(isset(explode(',', $answers[14]->body)[2]))Specialization: {!! explode(',', $answers[14]->body)[2] !!}<br>@endif
+					@if(isset(explode(',', $answers[14]->body)[3]))<strong>{!! explode(',', $answers[14]->body)[3] !!}</strong><br>@endif
+					@if(isset(explode(',', $answers[14]->body)[4]))Graduation Year: {!! explode(',', $answers[14]->body)[4] !!}<br>@endif
+					@if(isset(explode(',', $answers[14]->body)[5]))Specialization: {!! explode(',', $answers[14]->body)[5] !!}<br>@endif
+					@if(isset(explode(',', $answers[14]->body)[6]))<strong>{!! explode(',', $answers[14]->body)[6] !!}</strong><br>@endif
+					@if(isset(explode(',', $answers[14]->body)[7]))Graduation Year: {!! explode(',', $answers[14]->body)[7] !!}<br>@endif
+					@if(isset(explode(',', $answers[14]->body)[8]))Specialization: {!! explode(',', $answers[14]->body)[8] !!}<br>@endif
+			</td>
 			</tr>
 
 			@for($i = 15; $i < 17; $i++)

@@ -280,7 +280,11 @@ class SurveyController extends Controller
         $answer->body = $request->input('26');
         $answer->save();
 
-        return redirect()->route('surveys.index')->with('success', 'Survey Added');
+        if (Auth::user())
+            return redirect()->route('surveys.index')->with('success', 'Survey Added');
+        else
+            return view('surveys.thankyou')->with('success', 'Survey Added');
+
     }
 
     /**
