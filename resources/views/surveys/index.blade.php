@@ -27,7 +27,13 @@
 
 							<tr>
 								<td>{{ $survey->id }}</td>
-								<td><a href="{{ route('surveys.show', $survey) }}">{{ $survey->name }}</a></td>
+								<td>
+									@if($survey->name == "Alumni")
+										<a href="{{ route('surveys.show', $survey) }}">{{ $survey->name }}</a>
+									@else
+										<a href="{{ route('surveys.exitShow', $survey) }}">{{ $survey->name }}</a>
+									@endif
+								</td>
 								<td>@foreach($survey->answers as $answer) {{ $answer->body }} @break @endforeach</td>
 								<td>
 									{{ Form::open(['action' => ['SurveyController@destroy', $survey], 'method' => 'POST']) }}

@@ -22,6 +22,14 @@
                             </li>
                         @endauth
 
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('surveys.create') }}">Alumni Survey</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('surveys.exitCreate') }}">Exit Survey</a>
+                        </li>
+
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
