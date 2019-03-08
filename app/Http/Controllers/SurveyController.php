@@ -558,4 +558,77 @@ class SurveyController extends Controller
 
     }
 
+    public function employerCreate() {
+        $questions = Question::all();
+        $departments = Department::all();
+
+        $context = [
+            'questions' => $questions,
+            'departments' => $departments
+        ];
+
+        return view('surveys.employerCreate')->with($context);
+    }
+
+    public function employerStore(Request $request) {
+
+        $survey = new Survey;
+        $survey->name = 'Employer';
+        $survey->save();
+
+        $answer = new Answer;
+        $answer->survey_id = $survey->id;
+        $answer->question_id = $request->question[0];
+        $answer->body = $request->input('1');
+        $answer->save();
+
+        $answer = new Answer;
+        $answer->survey_id = $survey->id;
+        $answer->question_id = $request->question[1];
+        $answer->body = $request->input('2');
+        $answer->save();
+
+        $answer = new Answer;
+        $answer->survey_id = $survey->id;
+        $answer->question_id = $request->question[2];
+        $answer->body = $request->input('3');
+        $answer->save();
+
+        $answer = new Answer;
+        $answer->survey_id = $survey->id;
+        $answer->question_id = $request->question[3];
+        $answer->body = $request->input('4');
+        $answer->save();
+
+        $answer = new Answer;
+        $answer->survey_id = $survey->id;
+        $answer->question_id = $request->question[4];
+        $answer->body = $request->input('5');
+        $answer->save();
+
+        $answer = new Answer;
+        $answer->survey_id = $survey->id;
+        $answer->question_id = $request->question[5];
+        $answer->body = $request->input('6');
+        $answer->save();
+
+        if (Auth::user())
+            return redirect()->route('surveys.index')->with('success', 'Survey Added');
+        else
+            return view('surveys.thankyou')->with('success', 'Survey Added');
+
+    }
+
+    public function employerShow(Survey $survey) {
+
+        $answers = $survey->answers;
+
+        $context = [
+            'answers' => $answers
+        ];
+
+        return view('surveys.employerShow')->with($context);
+
+    }
+
 }

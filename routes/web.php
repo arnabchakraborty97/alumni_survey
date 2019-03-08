@@ -25,6 +25,9 @@ Route::resource('answers', 'AnswerController');
 Route::get('surveys/exitCreate', 'SurveyController@exitCreate')->name('surveys.exitCreate');
 Route::post('surveys/exitPost', 'SurveyController@exitStore')->name('surveys.exitStore');
 Route::get('surveys/showExit/{survey}', 'SurveyController@exitShow')->name('surveys.exitShow');
+Route::get('surveys/employerCreate', 'SurveyController@employerCreate')->name('surveys.employerCreate');
+Route::post('surveys/employerPost', 'SurveyController@employerStore')->name('surveys.employerStore');
+Route::get('surveys/showEmployer/{survey}', 'SurveyController@employerShow')->name('surveys.employerShow');
 Route::resource('surveys', 'SurveyController');
 
 

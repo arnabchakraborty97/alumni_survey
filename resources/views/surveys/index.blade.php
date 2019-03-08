@@ -30,8 +30,12 @@
 								<td>
 									@if($survey->name == "Alumni")
 										<a href="{{ route('surveys.show', $survey) }}">{{ $survey->name }}</a>
-									@else
+									@endif
+									@if($survey->name == "Exit")
 										<a href="{{ route('surveys.exitShow', $survey) }}">{{ $survey->name }}</a>
+									@endif
+									@if($survey->name == "Employer")
+										<a href="{{ route('surveys.employerShow', $survey) }}">{{ $survey->name }}</a>
 									@endif
 								</td>
 								<td>@foreach($survey->answers as $answer) {{ $answer->body }} @break @endforeach</td>

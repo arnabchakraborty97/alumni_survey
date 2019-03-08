@@ -28,6 +28,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('surveys.exitCreate') }}">Exit Survey</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('surveys.employerCreate') }}">Employer Survey</a>
+                        </li>
 
 
                     </ul>
